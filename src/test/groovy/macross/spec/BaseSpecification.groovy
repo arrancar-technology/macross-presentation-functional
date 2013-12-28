@@ -4,6 +4,8 @@ import geb.spock.GebReportingSpec
 import groovyx.net.http.RESTClient
 
 class BaseSpecification extends GebReportingSpec {
+  static final String PROJECT_NAME = 'Lyrx.io'
+
   static ConfigObject config = initializeConfig()
   static RESTClient stubulator = new RESTClient(config.stubulator.baseUrl)
   static RESTClient presentation = new RESTClient(config.presentation.baseUrl)

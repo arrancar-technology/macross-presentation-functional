@@ -5,10 +5,12 @@ import macross.spec.BaseSpecification
 enum PathFixture {
   BASE(BaseSpecification.config.presentation.baseContext + "/fixture"),
   RESET("$BASE/reset"),
+
   STATUS("$BASE/status"),
   STATUS_COMMIT_HASH("$STATUS/commitHash"),
-  STATUS_APPLICATION_VERSION("$STATUS/applicationVersion")
+  STATUS_APPLICATION_VERSION("$STATUS/applicationVersion"),
 
+  SONG("$BASE/songs")
   String path
 
   PathFixture(String path) {
