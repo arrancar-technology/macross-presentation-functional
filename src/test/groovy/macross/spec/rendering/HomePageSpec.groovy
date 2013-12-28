@@ -7,14 +7,10 @@ import macross.spec.BaseSpecification
 class HomePageSpec extends BaseSpecification {
 
   def "Homepage renders correctly"() {
-    given:
-      presentation.get(path: PathFixture.RESET)
-
     when:
-      toAt HomePage
+      to HomePage
 
     then:
-      locationField.displayed
-      locationField.@placeholder == 'Enter your town/postcode'
+      at HomePage
   }
 }

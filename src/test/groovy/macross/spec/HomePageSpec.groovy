@@ -9,15 +9,8 @@ import spock.lang.Ignore
 
 class HomePageSpec extends BaseSpecification {
 
-  def "Homepage renders correctly"() {
-    given:
-      presentation.get(path: PathFixture.RESET)
-
-    when:
-      to HomePage
-
-    then:
-      at HomePage
+  def setupSpec() {
+    presentation.get(path: PathFixture.RESET)
   }
 
   @Ignore
